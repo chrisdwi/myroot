@@ -1,0 +1,6 @@
+alias trhook='scp -p tr:hooks/commit-msg .git/hooks/'
+alias gk='gitk --all'
+alias gu='git gui'
+export HISTFILE='/i/.bash_history'
+alias gvim='/c/Program\ Files/Vim/vim73/gvim.exe'
+alias gv='gvim main.c'

@@ -1,0 +1,39 @@
+[user]
+	name = Chris Lee
+	email = chrisl@digiwell.com.tw
+[gui]
+	fontui = -family \"YaHei Consolas Hybrid\" -size 8 -weight normal -slant roman -underline 0 -overstrike 0
+	fontdiff = -family \"YaHei Consolas Hybrid\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
+	recentrepo = D:/git/TracReport.git
+	spellingdictionary = none
+[alias]
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+	dff = difftool
+	mgg = mergetool
+    lg = log --oneline $(git describe --abbrev=0)..
+    who = shortlog -s --
+[diff]
+	tool = diffmerge
+
+[difftool "diffmerge"]
+	cmd = git-diff-diffmerge-wrapper.sh "$LOCAL" "$REMOTE"
+
+[merge]
+	tool = diffmerge
+
+[mergetool "diffmerge"]
+	cmd = git-merge-diffmerge-wrapper.sh "$PWD/$LOCAL" "$PWD/$BASE" "$PWD/$REMOTE" "$PWD/$MERGED"
+	trustExitCode = false
+	keepBackup = false
+
+[core]
+	autocrlf = false
+	editor = 'C:/Program Files/Vim/vim73/gvim.exe'
+	excludesfile = d:/bin/gitexclude
+	ignorecase = true
+	pager = less -FXRS -x4
+	whitespace = tabwidth=4
